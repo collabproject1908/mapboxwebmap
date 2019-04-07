@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Setting the Character Set-->
+	<meta charset="utf-8">
+	
+	<!--Setting the responsiveness of the website to scale with different window sizes-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+	<title>About</title>
+	
+	<!-- Local link accessing the style.css file in the css directory to style the page. -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<!--Importing an icon library for the bars icon when screen size is less than 768px-->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="images/icon.png">
+	
+	<!--Importing jquery library to implement in the website-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    
+    <!--********************************************************************************-->
+    <style>
+            /* Overall Body */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, san-serif;
+            }
+            /* Navigation Bar CSS, inspired by W3Schools */
+            nav {
+                width: 100%;
+                background: #333;
+            }
+            #p_logo {
+                width: 35px;
+            }
+            img {
+                float: left;
+                width: 50px;
+            }
+            ul {
+                list-style-type: none;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0;
+                overflow: hidden;
+            }
+            ul li.hv {
+                list-style: none;
+                display: inline-block;
+                padding: 20px;
+            }
+            ul li.hv:hover {
+                background: #FF0000;
+            }
+            ul li img {
+                float: left;
+                width: 50px;
+                margin-top: 5px;
+                margin-left: 5px;
+                margin-right: 5px;
+            } 
+            ul li.hv a {
+                color: #fff;
+                text-decoration: none;
+            }
+            .toggle {
+                width: 100%;
+                padding: 10px 20px;
+                background: #333;
+                text-align: right;
+                box-sizing: border-box;
+                color: #FFF;
+                font-size: 30px;
+                display: none;
+            }
+            /* Changes view of navigation bar when screen size is less than 768px */
+            @media (max-width:768px) {
+                .toggle {
+                    display: block;
+                }
+                
+                ul {
+                    width: 100%;
+                    display: none;
+                }
+                
+                ul li img {
+                    display: none;
+                }
+                
+                ul li.hv {
+                    display: block;
+                    text-align: center;
+                }
+                
+                .active {
+                    display: block;
+                }
+            }
+            /* ------------------------------------------------------- Main Content Overall Styling --------------------------------------------------------- */
+            .content {
+                background-color: #ddd;
+                padding: 10px;
+            }
+            /* ------------------------------------------------------ Index Page Styling------------------------------------------------------- */
+            /* Slideshow container, inspired by W3Schools */
+            .slideshow-container {
+                max-width: 1200px;
+                position: relative;
+                margin: auto;
+                box-sizing: border-box;
+            }
+            
+            /* Hide the images by default, inspired by W3Schools */
+            .mySlides {
+                display: none;
+            }
+            .s_images {
+                float: none;
+                width: 100%;
+            }
+            /* Styling for the Next & previous buttons and placing them in the correct positions, inspired by W3Schools */
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -22px;
+                padding: 16px;
+                color: #333;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+            /* Position the "next button" to the right, inspired by W3Schools */
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            
+            /* On hover, add a black background color with a little bit see-through, inspired by W3Schools */
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+            
+            /* The dots/bullets/indicators, inspired by W3Schools */
+            .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+            .active, .dot:hover {
+	            background-color: #717171;
+            }
+  
+            /* Fading animation, inspired by W3schools. */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+            @-webkit-keyframes fade {
+                from {opacity: .4}
+                to {opacity: 1}
+            }
+            @keyframes fade {
+                from {opacity: .4}
+                to {opacity: 1}
+            }
+            /* Styling the Font */
+            h1 {
+                text-align: center;
+                word-spacing: 10px;
+            }
+            .h3_index {
+                text-align: justify;
+                margin: 0;
+                padding: 5px;
+            }
+            .footer {
+                background-color: #f1f1f1;
+                padding: 10px;
+	            text-align: center;
+            }
+        </style>
+        <!--********************************************************************************-->
+</head>
+<body>
+
+	<!--HTML Code for a responsive navigation bar that responded to screen size changes, inspired by W3Schools-->
+	<nav>
+		<div class="toggle">
+			<i class="fa fa-bars menu" aria-hidden="true"></i>
+		</div>
+		<ul>
+			<li class="hv"><a href="index.htm">Home</a></li>
+			<li class="hv"><a href="About.htm">Our Journey</a></li>
+			<li class="hv"><a href="Services.htm">Web Map Product</a></li>
+		</ul>
+	</nav>
+
+<!--Webpage Main Content-->
+<div class="content">
+    <h2>Our Journey</h2>
+    <h3>Connecting the Data</h3>
+	<p>
+	    <h4>What worked</h4>
+	</p>
+	<p>The building footprints were successfully uploaded onto MapBox. INSERT IMAGE BELOW</p>
+        <h4>What Didn't Work</h4>
+	<p>The method in loading the building footprints as a GeoJSON file onto a server and linking the file using MapBox JS did not work. Instead,
+        we uploaded our ODB data as tilesets and then referenced the ODB layer in the map.addLayer function
+    </p>
+        <h4>What We Had to Deviate From</h4>
+    <p>The building footprints are uploaded directly onto MapBox instead of being hosted on a server.</p>
+    
+    <br></br>
+
+    <h3>Displaying the Data</h3>
+        <h4>What Worked</h4>
+    <p>The building footprints are successfully displayed on the final product. The building polygons can be styled by the user, which was implemented by following this tutorial:
+        <a href="https://docs.mapbox.com/mapbox-gl-js/example/color-switcher/"></a>
+    </p>
+        <h4>What Didn't Work</h4>
+    <p>The dissemination area and dissemination blocks were unable to be styled on the map (link to page). 
+        If the areas and blocks were included, we wanted to display it as a toggle-able layer similar to the one in this tutorial:
+    <a href="https://docs.mapbox.com/mapbox-gl-js/example/toggle-layers/"></a>
+    </p>
+        <h4>What We Had to Deviate From</h4>
+    <p>The dissemination area and block polygons are omitted from the final product.</p>
+
+    <br></br>
+
+    <h3>Adding a Search Bar</h3>
+        <h4>What Worked</h4>
+    <p>This tutorial <a href="https://docs.mapbox.com/help/tutorials/local-search-geocoding-api/">(Geocoding Tutorial)</a>
+        from MapBox was used to add a search bar to the web page. This tutorial makes use of the Mapbox Geocoding API which transforms
+         written addresses and building names into latitude and longitude coordinates</p>
+         <h4>What Didn't Work</h4>
+    <p>The search bar was unable to search and display information other than addresses.</p>
+        <h4>What We Had to Deviate From</h4>
+    <p>The initial brainstorm of the project intended for the search bar to be able to look up addresses and search by  sqkm2 (?). 
+        The idea changed to incorporate more geographic functions offered by MapBox. These ideas included adding a <a href="https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder-proximity-bias/">
+        Local Search</a>restriction to limit the search results to the area displayed on the screen, and <a href="https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder-limit-region/">
+        bounding box</a> to limit results to the study area of Fredericton by coordinates.</p>
+    
+    <br></br>
+
+    <h3>Zoom Levels</h3>
+            <h4>What Worked</h4>
+    <p>The map navigation controls for displaying zoom in and zoom out buttons were able to
+         be displayed properly on screen using <a href="https://docs.mapbox.com/mapbox-gl-js/example/navigation/?fbclid=IwAR3cy9gMID_SSyENl23fPx_p77RXrLtywyjUT4SfhpHxwg3qpDuSYKS0NcI">
+        this tutorial</a>Highlighting over the zoom in and zoom out buttons brings up a text bubble which displays what each buttons function is. 
+    </p>
+        <h4>What Didn't Work</h4>
+    <p>Customized zoom levels were unable to be displayed at a dissemination area and dissemination block level because it 
+        required specific coordinates defining the view by the “fit bounds” method we were using. 
+        This may require further research to implement in the future. </p>
+        <h4>What We Had to Deviate From</h4>
+    <p>The bounding box feature  was used as a substitute to display
+         the study area at different zoom levels instead, following
+        <a href="https://docs.mapbox.com/mapbox-gl-js/example/fitbounds/">this tutorial</a>
+        This feature comes in the form of a clickable button that sends the user to 
+        3 pre-set areas; New Brunswick, Fredericton, and building level. 
+    </p>
+
+    <br></br>
+
+    <h3>Pop-Ups</h3>
+        <h4>What Worked</h4>
+    <p>When hovered over the building footprint polygons, a pop up shows 
+        the area in sqm2(?). This was successful following
+        <a href="https://github.com/mikelmaron/map-demos/blob/master/on-buildings/index.html">
+        this tutorial</a>
+    </p>
+        <h4>What Didn't Work</h4>
+    <p>The pop up code from <a href="https://docs.mapbox.com/mapbox-gl-js/example/polygon-popup-on-click/">
+    this example</a>did not work during testing, even when the code was copied over.</p>
+        <h4>What We Had to Deviate From</h4>
+    <p>There was no deviation from the original plan, 
+        as the pop ups worked and displayed the intended information.
+    </p>
+
+	
+	<!----<div class="ethics">
+	<ul class = "cul">
+	<li class="li-title">The Environment</li>
+	<li class = "lic">Ensuring the safety of the environment is our most important duty and everything we do is based on this. Safety information for our customers in which we operate can be requested my mail.</li>
+	<li class="li-title">Integrity</li>
+	<li class = "lic">Maintaining truth in all interactions, doing the right thing, taking accountability for our actions and following through on commitments to deliver the quality you deserve.</li>
+	<li class="li-title">Respect</li>
+	<li class = "lic">Valuing our customers, embracing their patronage and treating you with unfailing dignity.</li>
+	</ul>
+	</div>-->
+</div>
+
+<!-- Code for the footer bar -->
+<div class="footer">
+	<p>&copy; 2019 SZVS Corp</p>
+</div>
+
+<!--************************************************************************-->
+<script>
+        // Navigation Bar Script: click a bars button when the screen size becomes smaller than 768 px to access navigation bar
+        $(document).ready(function(){
+            $('.menu').click(function(){
+                $('ul').toggleClass('active');
+            })
+        })
+        // Script for the horizontal slide images panel on the homepage of the website
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        // Script to enable the image slide show on the homepage, lets users click through the different slide show images
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        } 
+    </script>
+    <!--************************************************************************-->
+
+
+</body>
+</html>
