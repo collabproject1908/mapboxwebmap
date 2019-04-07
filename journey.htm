@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Setting the Character Set-->
+	<meta charset="utf-8">
+	
+	<!--Setting the responsiveness of the website to scale with different window sizes-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+	<title>About</title>
+	
+	<!-- Local link accessing the style.css file in the css directory to style the page. -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<!--Importing an icon library for the bars icon when screen size is less than 768px-->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="images/icon.png">
+	
+	<!--Importing jquery library to implement in the website-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    
+    <!--********************************************************************************-->
+    <style>
+            /* Overall Body */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, san-serif;
+            }
+
+            /* Navigation Bar CSS, inspired by W3Schools */
+            nav {
+                width: 100%;
+                background: #333;
+            }
+
+
+            #p_logo {
+                width: 35px;
+            }
+
+
+            img {
+                float: left;
+                width: 50px;
+            }
+
+
+            ul {
+                list-style-type: none;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0;
+                overflow: hidden;
+            }
+
+
+            ul li.hv {
+                list-style: none;
+                display: inline-block;
+                padding: 20px;
+            }
+
+
+            ul li.hv:hover {
+                background: #FF0000;
+            }
+
+
+            ul li img {
+                float: left;
+                width: 50px;
+                margin-top: 5px;
+                margin-left: 5px;
+                margin-right: 5px;
+            } 
+
+
+            ul li.hv a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+
+            .toggle {
+                width: 100%;
+                padding: 10px 20px;
+                background: #333;
+                text-align: right;
+                box-sizing: border-box;
+                color: #FFF;
+                font-size: 30px;
+                display: none;
+            }
+
+
+            /* Changes view of navigation bar when screen size is less than 768px */
+            @media (max-width:768px) {
+                .toggle {
+                    display: block;
+                }
+                
+                ul {
+                    width: 100%;
+                    display: none;
+                }
+                
+                ul li img {
+                    display: none;
+                }
+                
+                ul li.hv {
+                    display: block;
+                    text-align: center;
+                }
+                
+                .active {
+                    display: block;
+                }
+            }
+
+            /* ------------------------------------------------------- Main Content Overall Styling --------------------------------------------------------- */
+            .content {
+                background-color: #ddd;
+                padding: 10px;
+            }
+
+            /* ------------------------------------------------------ Index Page Styling------------------------------------------------------- */
+            /* Slideshow container, inspired by W3Schools */
+            .slideshow-container {
+                max-width: 1200px;
+                position: relative;
+                margin: auto;
+                box-sizing: border-box;
+            }
+
+            
+            /* Hide the images by default, inspired by W3Schools */
+            .mySlides {
+                display: none;
+            }
+
+
+            .s_images {
+                float: none;
+                width: 100%;
+            }
+
+            /* Styling for the Next & previous buttons and placing them in the correct positions, inspired by W3Schools */
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -22px;
+                padding: 16px;
+                color: #333;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+
+            /* Position the "next button" to the right, inspired by W3Schools */
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+            
+            /* On hover, add a black background color with a little bit see-through, inspired by W3Schools */
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+
+            
+            /* The dots/bullets/indicators, inspired by W3Schools */
+            .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            .active, .dot:hover {
+	            background-color: #717171;
+            }
+
+  
+            /* Fading animation, inspired by W3schools. */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+
+            @-webkit-keyframes fade {
+                from {opacity: .4}
+                to {opacity: 1}
+            }
+
+
+            @keyframes fade {
+                from {opacity: .4}
+                to {opacity: 1}
+            }
+
+            /* Styling the Font */
+            h1 {
+                text-align: center;
+                word-spacing: 10px;
+            }
+
+
+            .h3_index {
+                text-align: justify;
+                margin: 0;
+                padding: 5px;
+            }
+
+            .footer {
+                background-color: #f1f1f1;
+                padding: 10px;
+	            text-align: center;
+            }
+        </style>
+        <!--********************************************************************************-->
+</head>
+<body>
+
+	<!--HTML Code for a responsive navigation bar that responded to screen size changes, inspired by W3Schools-->
+	<nav>
+		<div class="toggle">
+			<i class="fa fa-bars menu" aria-hidden="true"></i>
+		</div>
+		<ul>
+			<li class="hv"><a href="index.htm">Home</a></li>
+			<li class="hv"><a href="About.htm">Our Journey</a></li>
+			<li class="hv"><a href="Services.htm">Web Map Product</a></li>
+		</ul>
+	</nav>
+
+<!--Webpage Main Content-->
+<div class="content">
+	<h2>About Us</h2>
+	<p>The Martian Aerospatial Imaging Corporation was founded November 2018, in a small farming community called Lindsay, Ontario by Three GIS Spatial Analysis specialist Students. While they all came from wildly different
+	backgrounds and places, they are united by their love of quality aerial images, and found current resources to be lacking.</p>
+	<p>Ryan Kekes, from [REDACTED], is the [CLEARANCE LEVEL 5 REQUIRED TO ACCESS] of the company, and the proverbial face of the company.
+	Vraj Patel, from Etobicoke, is the Chief of Operations, The best remote sensing analyst of the three, however he has hung his hat in order to take a managerial approach to the process.
+	Stefan Noworyta, from Dundas, while not the best of the technical staff, has a passion for design, which is manifest as the graphics for the company. He also assists the other two founders in their specific capacities.</p>
+	<p>At MAIC we are dedicated to providing the highest quality product at the lowest possible price for our customers. We are a global leader in the Remote Sensing industry  whose images are marketed in all countries.
+	The company operates out of the state of the art Ares Building located in the Hellas Impact Crater on Mars and has third-party certified quality for our products from internationally recognized quality standards. We have received global recognition for our
+	leadership in corporate social responsibility and sustainable development, as well as for our business practices.</p>
+	<p>MAIC adheres to a strong set of company values that guide our decisions and are the foundation of everything we do.</p>
+	
+	<div class="ethics">
+	<ul class = "cul">
+	<li class="li-title">The Environment</li>
+	<li class = "lic">Ensuring the safety of the environment is our most important duty and everything we do is based on this. Safety information for our customers in which we operate can be requested my mail.</li>
+	<li class="li-title">Integrity</li>
+	<li class = "lic">Maintaining truth in all interactions, doing the right thing, taking accountability for our actions and following through on commitments to deliver the quality you deserve.</li>
+	<li class="li-title">Respect</li>
+	<li class = "lic">Valuing our customers, embracing their patronage and treating you with unfailing dignity.</li>
+	</ul>
+	</div>
+</div>
+
+<!-- Code for the footer bar -->
+<div class="footer">
+	<p>&copy; 2018 Martian Aerospace Imagery Corporation</p>
+</div>
+
+<!--************************************************************************-->
+<script>
+        // Navigation Bar Script: click a bars button when the screen size becomes smaller than 768 px to access navigation bar
+        $(document).ready(function(){
+            $('.menu').click(function(){
+                $('ul').toggleClass('active');
+            })
+        })
+
+        // Script for the horizontal slide images panel on the homepage of the website
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        // Script to enable the image slide show on the homepage, lets users click through the different slide show images
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        } 
+    </script>
+    <!--************************************************************************-->
+
+
+</body>
+</html>
