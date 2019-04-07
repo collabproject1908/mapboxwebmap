@@ -34,10 +34,18 @@
             #p_logo {
                 width: 35px;
             }
+
             img {
                 float: left;
                 width: 50px;
             }
+			
+			<! Pic style>
+			.pics {
+				margin:25px;
+				width: 100%;
+			}
+			
             ul {
                 list-style-type: none;
                 width: 100%;
@@ -218,7 +226,7 @@
 	<p>The building footprints were successfully uploaded onto MapBox.</p>
         <h4>What Didn't Work</h4>
 	<p>The method in loading the building footprints as a GeoJSON file onto a server and linking the file using MapBox JS did not work. Instead,
-        we uploaded our ODB data as tilesets and then referenced the ODB layer in the map.addLayer function</p>
+        we uploaded our ODB data as tilesets and then referenced the ODB layer in the map.addLayer function.</p>
         <h4>What We Had to Deviate From</h4>
     <p>The building footprints are uploaded directly onto MapBox instead of being hosted on a server.</p>
     
@@ -226,33 +234,45 @@
 
     <h3>Displaying the Data</h3>
         <h4>What Worked</h4>
-    <p>The building footprints are successfully displayed on the final product. The building polygons can be styled by the user, which was implemented by following this tutorial:
-        <a href="https://docs.mapbox.com/mapbox-gl-js/example/color-switcher/"></a>
-		<img src="Images/buildingstyle.png" alt="Building style">
-		<img src="Images/buildingstyle2.png" alt="Building style in red"></p>
-        <h4>What Didn't Work</h4>
+    <p>The building footprints are successfully displayed on the final product. The building polygons can be styled by the user, 
+	which was implemented by following
+        <a href="https://docs.mapbox.com/mapbox-gl-js/example/color-switcher/"> this tutorial.</a>
+		</p>
+	<div class="pics">
+		<img src="Images\buildingstyle.png" alt="Building style">
+	</div>
+		<img src="Images\buildingstyle2.png" alt="Building style in red">
+	<div class="pics">
+	</div>
+		<h4>What Didn't Work</h4>
     <p>The dissemination area and dissemination blocks were unable to be styled on the map (link to page). 
-        If the areas and blocks were included, we wanted to display it as a toggle-able layer similar to the one in this tutorial:
-    <a href="https://docs.mapbox.com/mapbox-gl-js/example/toggle-layers/"></a>
+        If the areas and blocks were included, we wanted to display it as a toggle-able layer similar to the one in 
+    <a href="https://docs.mapbox.com/mapbox-gl-js/example/toggle-layers/"> this tutorial.</a>
     </p>
-        <h4>What We Had to Deviate From</h4>
+		<h4>What We Had to Deviate From</h4>
     <p>The dissemination area and block polygons are omitted from the final product.</p>
 
     <br></br>
 
     <h3>Adding a Search Bar</h3>
-        <h4>What Worked</h4>
-    <p>This tutorial <a href="https://docs.mapbox.com/help/tutorials/local-search-geocoding-api/">(Geocoding Tutorial)</a>
+		<h4>What Worked</h4>
+    <p>The <a href="https://docs.mapbox.com/help/tutorials/local-search-geocoding-api/"> geocoding tutorial </a>
         from MapBox was used to add a search bar to the web page. This tutorial makes use of the Mapbox Geocoding API which transforms
          written addresses and building names into latitude and longitude coordinates
-	    <img src="searchbar.png" alt="Search bar">
-	    <img src="searchbardemo.png" alt="Search bar demo"></p>
+	    </p>
+		<div class="pics">
+			<img src="Images\searchbar.png" alt="Search bar">
+		</div>
+	    <div class="pics">
+			<img src="Images\searchbardemo.png" alt="Search bar demo">
+		</div>
+		<br>
          <h4>What Didn't Work</h4>
     <p>The search bar was unable to search and display information other than addresses.</p>
         <h4>What We Had to Deviate From</h4>
     <p>The initial brainstorm of the project intended for the search bar to be able to look up addresses and search by sqm2. 
         The idea changed to incorporate more geographic functions offered by MapBox. These ideas included adding a <a href="https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder-proximity-bias/">
-        Local Search</a>restriction to limit the search results to the area displayed on the screen, and <a href="https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder-limit-region/">
+        local search</a> restriction to limit the search results to the area displayed on the screen, and <a href="https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder-limit-region/">
         bounding box</a> to limit results to the study area of Fredericton by coordinates.</p>
     
     <br></br>
@@ -261,8 +281,10 @@
             <h4>What Worked</h4>
     <p>The map navigation controls for displaying zoom in and zoom out buttons were able to
          be displayed properly on screen using <a href="https://docs.mapbox.com/mapbox-gl-js/example/navigation/?fbclid=IwAR3cy9gMID_SSyENl23fPx_p77RXrLtywyjUT4SfhpHxwg3qpDuSYKS0NcI">
-        this tutorial</a>Highlighting over the zoom in and zoom out buttons brings up a text bubble which displays what each buttons function is.
-	    <img src="zoomcontrols.png" alt="Zoom control">
+        this tutorial.</a> Highlighting over the zoom in and zoom out buttons brings up a text bubble which displays what each buttons function is.
+	    <div class="pics">
+			<img src="Images\zoomcontrols.png" alt="Zoom control">
+		</div>
     </p>
         <h4>What Didn't Work</h4>
     <p>Customized zoom levels were unable to be displayed at a dissemination area and dissemination block level because it 
@@ -271,31 +293,36 @@
         <h4>What We Had to Deviate From</h4>
     <p>The bounding box feature  was used as a substitute to display
          the study area at different zoom levels instead, following
-        <a href="https://docs.mapbox.com/mapbox-gl-js/example/fitbounds/">this tutorial</a>
+        <a href="https://docs.mapbox.com/mapbox-gl-js/example/fitbounds/">this tutorial. </a>
         This feature comes in the form of a clickable button that sends the user to 
-        3 pre-set areas; New Brunswick, Fredericton, and building level.
-	    <img src="zoomlevels.png" alt="Zoom level at default (Fredericton)">
-	    <img src="zoomlevelNB.png" alt="Zoom level at New Brunswick level">
-	    <img src="zoomlevelBUILDINGS.png" alt="Zoom level at building level">
+        3 pre-set areas; New Brunswick, Fredericton, and building level.</p>
+	    <div class="pics">
+			<img src="Images\zoomlevels.png" alt="Zoom level at default (Fredericton)">
+		</div>
+		<div class="pics">
+			<img src="Images\zoomlevelNB.png" alt="Zoom level at New Brunswick level">
+		</div>
+		<div class="pics">
+			<img src="Images\zoomlevelBUILDINGS.png" alt="Zoom level at building level">
+		</div>
     </p>
 
     <br></br>
 
     <h3>Pop-Ups</h3>
         <h4>What Worked</h4>
-    <p>When hovered over the building footprint polygons, a pop up shows 
-        the area in sqm2. This was successful following
+    <p>When hovered over the building footprint polygons, a pop up shows the area in sqm2. This was successful following
         <a href="https://github.com/mikelmaron/map-demos/blob/master/on-buildings/index.html">
-        this tutorial</a>
-	    <img src="popupdemo.png" alt="Pop ups">
+        this tutorial.</a>
+	    <div class="pics">
+			<img src="Images\popupdemo.png" alt="Pop ups">
+		</div>
     </p>
-        <h4>What Didn't Work</h4>
+		<h4>What Didn't Work</h4>
     <p>The pop up code from <a href="https://docs.mapbox.com/mapbox-gl-js/example/polygon-popup-on-click/">
-    this example</a>did not work during testing, even when the code was copied over.</p>
-        <h4>What We Had to Deviate From</h4>
-    <p>There was no deviation from the original plan, 
-        as the pop ups worked and displayed the intended information.
-    </p>
+    this example</a> did not work during testing, even when the code was copied over.</p>
+		<h4>What We Had to Deviate From</h4>
+    <p>There was no deviation from the original plan, as the pop ups worked and displayed the intended information.</p>
 
 	
 	<!----<div class="ethics">
